@@ -1,0 +1,18 @@
+ void setup()
+{
+ Serial.begin(9600);
+ pinMode(13,OUTPUT);
+ pinMode(2,INPUT);
+}
+
+void loop()
+{
+ int a = digitalRead(2);
+ Serial.print(a);
+ if(a)
+   digitalWrite(13,HIGH);
+ else
+   digitalWrite(13,LOW);
+ delay(1000);
+}
+
